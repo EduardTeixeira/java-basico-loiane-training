@@ -1,0 +1,101 @@
+package com.treinamento.cursojava.aula27.labs;
+
+public class Lampada {
+
+	private String modelo;
+	private String tensao;
+	private int potencia;
+	private String cor;
+	private String tipoLuz;
+	private String garantiaMeses;
+	private String[] tipos;
+	private Boolean ligado;
+
+	public String getModelo() {
+		return modelo;
+	}
+
+	public void setModelo(String modelo) {
+		this.modelo = modelo;
+	}
+
+	public String getTensao() {
+		return tensao;
+	}
+
+	public void setTensao(String tensao) {
+		this.tensao = tensao;
+	}
+
+	public int getPotencia() {
+		return potencia;
+	}
+
+	public void setPotencia(int potencia) {
+		this.potencia = potencia;
+	}
+
+	public String getCor() {
+		return cor;
+	}
+
+	public void setCor(String cor) {
+		this.cor = cor;
+	}
+
+	public String getTipoLuz() {
+		return tipoLuz;
+	}
+
+	public void setTipoLuz(String tipoLuz) {
+		this.tipoLuz = tipoLuz;
+	}
+
+	public String getGarantiaMeses() {
+		return garantiaMeses;
+	}
+
+	public void setGarantiaMeses(String garantiaMeses) {
+		this.garantiaMeses = garantiaMeses;
+	}
+
+	public String[] getTipos() {
+		return tipos;
+	}
+
+	public void setTipos(String[] tipos) {
+		this.tipos = tipos;
+	}
+
+	public Boolean getLigado() {
+		return ligado;
+	}
+
+	public void setLigado(Boolean ligado) {
+		this.ligado = ligado;
+	}
+
+	public void ligar() {
+		this.ligado = true;
+		this.mostrarEstado();
+	}
+
+	public void desligar() {
+		this.ligado = false;
+		this.mostrarEstado();
+	}
+
+	public void mudarEstado() {
+		this.ligado = !this.ligado;
+		mostrarEstado();
+	}
+
+	public void mostrarEstado() {
+		if (this.ligado == true) {
+			System.out.println("A lampada esta ligada");
+		} else {
+			System.out.println("A lampada esta desligada");
+		}
+	}
+
+}
